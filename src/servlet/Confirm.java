@@ -17,7 +17,7 @@ import user.User;
  */
 @WebServlet("/Confirm")
 public class Confirm extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -27,24 +27,29 @@ public class Confirm extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	    doRequest(request,response);
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        doRequest(request, response);
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	    doRequest(request,response);
-	}
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        doRequest(request, response);
+    }
 
-	private void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-	    HttpSession session = request.getSession();
+    private void doRequest(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         User user = new User();
@@ -53,8 +58,9 @@ public class Confirm extends HttpServlet {
         user.setAddress(request.getParameter("address"));
         user.setPass(request.getParameter("pass"));
         session.setAttribute("user", user);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/confirm.jsp");
+        RequestDispatcher dispatcher = request
+                .getRequestDispatcher("WEB-INF/jsp/confirm.jsp");
         dispatcher.forward(request, response);
-	}
+    }
 
 }
