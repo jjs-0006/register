@@ -50,8 +50,6 @@ public class Complete extends HttpServlet {
     private void doRequest(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
         User user = (User) session.getAttribute("user");
         user.setName("");
         user.setNick("");
