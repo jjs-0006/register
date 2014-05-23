@@ -10,7 +10,7 @@
 <h1>登録完了</h1>
 名前:　　　　　${sessionScope['user'].getName() }<br>
 ニックネーム:　${sessionScope['user'].getNick() }<br>
-メールアドレス:${sessionScope['user'].getAddress() } %><br>
+メールアドレス:${sessionScope['user'].getAddress() } <br>
 パスワード:　　${sessionScope['user'].getPass() }<br>
 <a href="Complete">TOPへ戻る</a>
 </body>

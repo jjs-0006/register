@@ -10,7 +10,7 @@
 <h1>確認画面</h1>
 名前:　　　　　${sessionScope.user.name }<br>
 ニックネーム:　${sessionScope.user.nick }<br>
-メールアドレス:${sessionScope.user.address } %><br>
+メールアドレス:${sessionScope.user.address }<br>
 パスワード:　　${sessionScope.user.pass }<br>
 <a href="complete.jsp"><input type="button" value="OK"></a>　　<a href="index.jsp"><input type="button" value="Cancel"></a>
 
